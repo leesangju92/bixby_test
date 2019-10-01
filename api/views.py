@@ -18,7 +18,6 @@ def test(request):
     return render(request, "api/base.html")
 
 
-@api_view(["GET", "POST"])
 def wines(request):
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     print("get request")
