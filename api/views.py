@@ -20,8 +20,10 @@ def test(request):
 
 @api_view(["GET", "POST"])
 def wines(request):
+    print("get request")
     if request.method == "GET":
         print(request.get)
+        print("hi")
         queries = dict(request.GET)
         # query를 GET 요청으로 보낼 경우 request.GET을 dict로 변환
         # request.GET의 value 값이 list형식으로 들어와서 list에서 빼주는 for문
