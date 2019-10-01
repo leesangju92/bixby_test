@@ -18,9 +18,8 @@ def test(request):
     return render(request, "api/base.html")
 
 
+@api_view(["GET", "POST"])
 def wines(request):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    print("get request")
     if request.method == "GET":
         queries = dict(request.GET)
         # query를 GET 요청으로 보낼 경우 request.GET을 dict로 변환
